@@ -1,9 +1,13 @@
 package com.example.demo.model.user;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+import org.springframework.stereotype.Component;
 
+@Component
 public class Ticket {
+	private long pnr;
 	private String train_no;
     private String train_name;
     private String start;
@@ -16,6 +20,54 @@ public class Ticket {
     private String sex;
     private int age;
     private String quota;
+    private String email_address;
+    private LocalDate date_of_journey;
+    private String journey_time;
+    private String seat_no;
+    public long getPnr() {
+		return pnr;
+	}
+	public void setPnr(long pnr) {
+		this.pnr = pnr;
+	}
+	public String getEmail_address() {
+		return email_address;
+	}
+	public void setEmail_address(String email_address) {
+		this.email_address = email_address;
+	}
+	public LocalDate getDate_of_journey() {
+		return date_of_journey;
+	}
+	public void setDate_of_journey(LocalDate date_of_journey) {
+		this.date_of_journey = date_of_journey;
+	}
+	public String getJourney_time() {
+		return journey_time;
+	}
+	public void setJourney_time(String journey_time) {
+		this.journey_time = journey_time;
+	}
+	public String getSeat_no() {
+		return seat_no;
+	}
+	public void setSeat_no(String seat_no) {
+		this.seat_no = seat_no;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	public Long getTransactional_id() {
+		return transactional_id;
+	}
+	public void setTransactional_id(Long transactional_id) {
+		this.transactional_id = transactional_id;
+	}
+	private String status;
+    private Long transactional_id;
     
     
     public String getTrain_no() {
@@ -94,10 +146,12 @@ public class Ticket {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Ticket(String train_no, String train_name, String start, String destination, String class_name,
+	public Ticket(long pnr, String train_no, String train_name, String start, String destination, String class_name,
 			LocalDateTime departure_time, LocalDateTime arrival_time, String passenger_name, String contact_no,
-			String sex, int age, String quota) {
+			String sex, int age, String quota, String email_address, LocalDate date_of_journey, String journey_time,
+			String seat_no, String status, Long transactional_id) {
 		super();
+		this.pnr = pnr;
 		this.train_no = train_no;
 		this.train_name = train_name;
 		this.start = start;
@@ -110,5 +164,12 @@ public class Ticket {
 		this.sex = sex;
 		this.age = age;
 		this.quota = quota;
+		this.email_address = email_address;
+		this.date_of_journey = date_of_journey;
+		this.journey_time = journey_time;
+		this.seat_no = seat_no;
+		this.status = status;
+		this.transactional_id = transactional_id;
 	}
+	
 }

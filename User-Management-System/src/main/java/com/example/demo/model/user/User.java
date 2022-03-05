@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 public class User {
 	
 	@Transient
-	public static final String SEQUENCE_NAME = "user_Sequence";
+	public static final String SEQUENCE_NAME = "user-Sequence";
 
 	@Id
 	private long  id;
